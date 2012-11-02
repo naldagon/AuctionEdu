@@ -39,7 +39,10 @@ namespace AuctionAPI
             request.Pagination = pageNation;
 
             //API호출
-            GetSearchResultsResponseT response = new AuctionServiceSoapClient().GetSearchResultsBest100(null, ref ticket, request);
+            GetSearchResultsResponseT responseList = new AuctionServiceSoapClient().GetSearchResultsBest100(null, ref ticket, request);
+
+            grdSearch.DataSource = responseList.SearchResultItemArray;     
+            
         }
     }
 }

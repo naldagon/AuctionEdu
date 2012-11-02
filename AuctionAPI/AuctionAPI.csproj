@@ -105,6 +105,7 @@
     <None Include="Service References\AuctionService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\DataSources\AuctionAPI.AuctionService.ItemT.datasource" />
     <None Include="Service References\AuctionService\AuctionAPI.AuctionService.AddEmergencyInformReplyResponseT.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
