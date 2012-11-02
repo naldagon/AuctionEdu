@@ -44,6 +44,20 @@ namespace AuctionAPI
             grdSearch.DataSource = responseList.SearchResultItemArray;     
             
         }
+
+        private void grdSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            //Click된 ItemNo 값 체크
+            string itemNo = (string) grdSearch.CurrentCell.Value;
+            if (itemNo.Length < 10 || !itemNo.StartsWith("A")) return;
+
+            //Call Mobile WebPage..
+            brwItem.ScriptErrorsSuppressed = true;
+            brwItem.Navigate("http://mw.auction.co.kr/MW/item/ViewItem.jsp?ItemID=" + itemNo, "", null,
+                "User-Agent:Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC Vision Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
+        }
     }
 }
  

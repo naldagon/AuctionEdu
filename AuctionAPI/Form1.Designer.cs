@@ -94,6 +94,7 @@
             this.optionBuyTypeSpecifiedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.inputChannelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.brwItem = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemTBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -182,8 +183,9 @@
             this.grdSearch.Location = new System.Drawing.Point(12, 41);
             this.grdSearch.Name = "grdSearch";
             this.grdSearch.RowTemplate.Height = 23;
-            this.grdSearch.Size = new System.Drawing.Size(544, 234);
+            this.grdSearch.Size = new System.Drawing.Size(341, 224);
             this.grdSearch.TabIndex = 4;
+            this.grdSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdSearch_CellContentClick);
             // 
             // itemIDDataGridViewTextBoxColumn
             // 
@@ -561,11 +563,21 @@
             // 
             this.itemTBindingSource.DataSource = typeof(AuctionAPI.AuctionService.ItemT);
             // 
+            // brwItem
+            // 
+            this.brwItem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.brwItem.Location = new System.Drawing.Point(350, 0);
+            this.brwItem.MinimumSize = new System.Drawing.Size(20, 20);
+            this.brwItem.Name = "brwItem";
+            this.brwItem.Size = new System.Drawing.Size(318, 265);
+            this.brwItem.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 275);
+            this.ClientSize = new System.Drawing.Size(668, 265);
+            this.Controls.Add(this.brwItem);
             this.Controls.Add(this.grdSearch);
             this.Controls.Add(this.btnSearch);
             this.Name = "Form1";
@@ -643,6 +655,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView grdSearch;
+        private System.Windows.Forms.WebBrowser brwItem;
     }
 }
 
