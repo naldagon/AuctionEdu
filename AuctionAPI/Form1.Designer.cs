@@ -47,6 +47,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(114, 21);
             this.txtSearch.TabIndex = 2;
+            this.txtSearch.Text = "크리스마스";
             // 
             // btnSearch
             // 

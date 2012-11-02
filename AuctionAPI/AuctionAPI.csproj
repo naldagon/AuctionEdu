@@ -35,6 +35,12 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -58,6 +64,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -68,6 +75,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -77,6 +85,327 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Service References\AuctionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AuctionService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuctionService\auctionservice.disco" />
+    <None Include="Service References\AuctionService\auctionservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuctionService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.AddEmergencyInformReplyResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.AddFavoriteItemResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.AdditionalReturnFeeT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.AddQnAReplyResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.AdSuccessfulBidT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.AvailableSellerCouponRecordT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.BidCancelRequestListT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.BidCancelResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.BidListResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.BidResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.BuyerNoteDetailBySeqnoResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.CancelApprovalT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.CartResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.CatalogCategoryT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.CategoryT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ChangeShippingTypeBeforeOrderResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ChangeShippingTypeResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.CompletedRemittanceT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ConfirmCancelApprovalListResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ConfirmingReceiptT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DeleteFavoriteItemResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DeliveryCompListT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DeliveryPrepareListResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DenySellResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DoChangeRemittanceMethodResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DoEcouponOrderConfirmResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DoExchangeDelayNoticeResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DoExchangeSwitchResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DoExchangeToReturnResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DoReturnApprovalResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DoReturnHoldResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DoReturnRequestBySellerResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DoSellingCancelResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DoShippingBundleResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.DoShippingGeneralResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.EmergencyInformListT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.EncryptedTicketHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ExchangeRequestListT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ExpectedRemittanceT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.FavoriteAuctionItemListResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.FeedbackFirstResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.FeedbackSecondRemainListT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.FeedbackSecondResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.FinishedItemT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetAuthenticateResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetAvailableEmoneyResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetBiddingHistoryResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetBrandIDResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetBuyingDecisionInfoResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetCatalogResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetExchangeDetailInfoResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetISBNSearchResultResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetItemQnAListResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetMyAccountResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetPromotionItemListResponseTPromotionItemListT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetPromotionMasterInfoResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetPromotionSubTitleInfoResponseTPromotionSubTitleT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetReturnDetailResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetSearchResultsLodgeResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetSearchResultsResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetSearchResultsTicketResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetSearchResultsUsedMarketResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetSellerQnAListResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetSellerSellingCategoriesResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetSettlementDetailResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetShippingDetailResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetSohoLookbookResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetSohoSaleItemsResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetSohoShopBest50TabResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.GetSohoShopSearchResultsResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.InterestItemResultT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ItemQnAT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.KeywordChartT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.MyAuctionItemListResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.MyNoteT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.MyQuestionToHelpDeskT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.OrderCanceledT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.PaidOrderT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.RelatedItemT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.RemitAccountT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.RemoveQnAResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ReturnListT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SearchADItemT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SellerCouponT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SellerNoteDetailBySeqnoResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SellerNoteReplyResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SendingDetailT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SendNoteToSellerResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SetBuyingDecisionAndFeedbackFirstResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ShippingAddressT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ShippingDetailInfoT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ShippingOrderListT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SohoBest50Item.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SohoHomeHotKeywordItemDetailT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SohoShopBestItemT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SohoShopCategoryIndexEntryT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.SohoShopItemT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.StyleFinderT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\AuctionAPI.AuctionService.ViewItemResponseT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuctionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
