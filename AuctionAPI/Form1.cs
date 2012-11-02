@@ -53,8 +53,10 @@ namespace AuctionAPI
             string itemNo = (string) grdSearch.CurrentCell.Value;
             if (itemNo.Length < 10 || !itemNo.StartsWith("A")) return;
 
-            //Call Mobile WebPage..
+            //script error 무시
             brwItem.ScriptErrorsSuppressed = true;
+
+            //Call Mobile WebPage..
             brwItem.Navigate("http://mw.auction.co.kr/MW/item/ViewItem.jsp?ItemID=" + itemNo, "", null,
                 "User-Agent:Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC Vision Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
         }
